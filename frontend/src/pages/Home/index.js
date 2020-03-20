@@ -30,7 +30,7 @@ export default class Component extends React.Component {
   };
 
   render() {
-    if (this.state.dataLength) {
+    if (!this.state.dataLength) {
       return <Table items={this.state.items} />;
     }
     return <div className="center-text">No Data to Display</div>;
