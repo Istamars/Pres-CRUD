@@ -14,38 +14,31 @@ These instructions will get you a copy of the project up and running on your loc
 
 There are several step before dive into the installation.
 
-1. Create database
+1. open psql shell and connect to database
+
+2. Create database
 
 ```
-CREATE DATABASE gsh
-  WITH
-  OWNER = postgres
-  ENCODING = 'UTF8'
-  LC_COLLATE = 'English_Indonesia.1252'
-  LC_CTYPE = 'English_Indonesia.1252'
-  TABLESPACE = pg_default
-  CONNECTION LIMIT = -1;
+CREATE DATABASE gsh;
 ```
 
-2. Create table (create table 'books')
+3. Connect to gsh
 
 ```
-CREATE TABLE public.books
-(
-id integer NOT NULL DEFAULT nextval('books_id_seq'::regclass),
-author character varying(255) COLLATE pg_catalog."default" NOT NULL,
-title character varying(255) COLLATE pg_catalog."default" NOT NULL,
-CONSTRAINT books_pkey PRIMARY KEY (id)
-)
-WITH (
-OIDS = FALSE
-)
-TABLESPACE pg_default;
-ALTER TABLE public.books
-OWNER to postgres;
+\c gsh
 ```
 
-3. Let the table empty (or you can add several data if you desire)
+4. Create table (create table 'books')
+
+```
+CREATE TABLE users (
+  ID SERIAL PRIMARY KEY,
+  name VARCHAR(30),
+  email VARCHAR(30)
+);
+```
+
+5. Let the table empty (or you can add several data if you desire)
 
 ### Installing
 
