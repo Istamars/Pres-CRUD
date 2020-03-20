@@ -16,14 +16,15 @@ There are several step before dive into the installation.
 
 1. Create database
 
-```CREATE DATABASE gsh
-    WITH
-    OWNER = postgres
-    ENCODING = 'UTF8'
-    LC_COLLATE = 'English_Indonesia.1252'
-    LC_CTYPE = 'English_Indonesia.1252'
-    TABLESPACE = pg_default
-    CONNECTION LIMIT = -1;
+```
+CREATE DATABASE gsh
+  WITH
+  OWNER = postgres
+  ENCODING = 'UTF8'
+  LC_COLLATE = 'English_Indonesia.1252'
+  LC_CTYPE = 'English_Indonesia.1252'
+  TABLESPACE = pg_default
+  CONNECTION LIMIT = -1;
 ```
 
 2. Create table (create table 'books')
@@ -51,9 +52,7 @@ OWNER to postgres;
 Simply run this command in your terminal
 
 ```
-
 yarn install
-
 ```
 
 ## Running the Application
@@ -61,13 +60,7 @@ yarn install
 To run this application, run this command on root directory.
 
 ```
-
 npm run start
-
 ```
 
 Application will start automatically on : `http://localhost:3000`
-
-```
-
-```
